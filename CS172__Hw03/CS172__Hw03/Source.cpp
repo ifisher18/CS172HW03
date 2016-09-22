@@ -47,7 +47,7 @@ public:
 	// function that sets to on or off
 	void setOn(bool OnorOff)
 	{
-		if (OnorOff == false)
+		if (OnorOff == false) // if statement that checks if fan is on or off
 		{
 			On = false;
 		}
@@ -69,7 +69,8 @@ public:
 int main()
 {
 	Fan F1, F2; // declares two fan objects
-				// For first fan, assigns values to variables
+
+	// For first fan, assigns values to variables
 	F1.speed = 3;
 	F1.radius = 10;
 	F1.On = true;
@@ -89,12 +90,19 @@ int main()
 	F2.setRadius(5);
 	F2.setOn(false);
 
-	// calls get function for Fan 1
-	cout << F1.getspeed() << endl;
-	cout << F1.getradius() << endl;
-	cout << F1.getOn() << endl;
+	// calls get function for Fan 1 and couts to terminal
+	cout << "The fan properties for the first fan are: " << endl;
+	cout << "-- The fan speed is: " << F1.getspeed() << endl;
+	cout << "-- The fan radius is: " << F1.getradius() << endl;
+	cout << "-- The fan is: " << F1.getOn() << endl;
+	cout << endl;
 
-	// calls get function for Fan 2
+	// calls get function for Fan 2 and couts to terminal
+	cout << "The fan properties for the second fan are: " << endl;
+	cout << "-- The fan speed is: " << F2.getspeed() << endl;
+	cout << "-- The fan radius is: " << F2.getradius() << endl;
+	cout << "-- The fan is: " << F2.getOn() << endl;
+	cout << endl;
 
 	return 0;
 }
