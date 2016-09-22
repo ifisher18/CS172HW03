@@ -4,7 +4,7 @@
 /////////////////
 
 #include <iostream>
-#include <cmath>
+
 using namespace std;
 
 class Fan // creates a class called "Fan"
@@ -14,19 +14,19 @@ public:
 	bool On;
 	double radius;
 
-	// function that gets a value speed (accesor function)
+	// function that gets a value speed (accessor function)
 	int getspeed()
 	{
 		return speed;
 	}
 
-
+	// function that gets a value radius (accessor function)
 	double getradius()
 	{
 		return radius;
 	}
 
-
+	// function that gets a value On (accessor function)
 	bool getOn()
 	{
 		return On;
@@ -94,14 +94,20 @@ int main()
 	cout << "The fan properties for the first fan are: " << endl;
 	cout << "-- The fan speed is: " << F1.getspeed() << endl;
 	cout << "-- The fan radius is: " << F1.getradius() << endl;
-	cout << "-- The fan is: " << F1.getOn() << endl;
+	if (F1.getOn() == 1)
+		cout << "-- The fan is on" << endl;
+	else
+		cout << "-- The fan is off" << endl;
 	cout << endl;
 
 	// calls get function for Fan 2 and couts to terminal
 	cout << "The fan properties for the second fan are: " << endl;
 	cout << "-- The fan speed is: " << F2.getspeed() << endl;
 	cout << "-- The fan radius is: " << F2.getradius() << endl;
-	cout << "-- The fan is: " << F2.getOn() << endl;
+	if (F2.getOn() == 1)
+		cout << "-- The fan is on" << endl;
+	else
+		cout << "-- The fan is off" << endl;
 	cout << endl;
 
 	return 0;
