@@ -86,7 +86,7 @@ int main ()
 		cout << "The first root is: " << input.getRoot1() << endl;
 		cout << "The second root is: " << input.getRoot2() << endl;
 	}
-	else if (discriminantcheck = 0)
+	else if (discriminantcheck == 0)
 	{
 		cout << "The first root is: " << input.getRoot1() << endl;
 	}
