@@ -35,6 +35,7 @@ public:
 	// function
 	int getNext()
 	{
+
 		return; // even number (next even number after current even number
 	}
 
