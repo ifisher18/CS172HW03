@@ -27,8 +27,20 @@ public:
 	}
 
 	// get function for a
+	int getA ()
+	{
+		return a;
+	}
 	// get function for b
+	int getB ()
+	{
+		return b;
+	}
 	// get function for c
+	int getC ()
+	{
+		return c;
+	}
 
 	// function that returns the discriminant
 	double getDiscriminant (int a, int b, int c)
@@ -55,6 +67,19 @@ public:
 
 int main ()
 {
+	QuadraticEquation Root1, Root2; // declares two root objects
 
-	return 0;
+	// prompt user for a, b, and c values
+	cout << "This is a program that calculates the roots of the quadratic equation." << endl;
+	cout << "Enter a value for 'a' :";
+	cin >> a_input;
+	cout << endl;
+	cout << "Enter a value for 'b' :";
+	cin >> b_input;
+	cout << endl;
+	cout << "Enter a value for 'c' :";
+	cin >> c_input;
+	
+	// if the disc. is positive
+	cout << "Based on the discriminant, the two roots are: " << get
 }
