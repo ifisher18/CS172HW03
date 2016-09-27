@@ -49,25 +49,25 @@ public:
 	}
 
 	// function that returns the first root
-	double getRoot1()
+	double getRoot1 ()
 	{
 		return (((-b) + sqrt((b * b) - (4 * a * c))) / (2 * a));
 	}
 
 	// function that returns the second root
-	double getRoot2()
+	double getRoot2 ()
 	{
-		if (getDiscriminant() >= 0)
+		//if (getDiscriminant() >= 0)
 			return (((-b) - sqrt((b * b) - (4 * a * c))) / (2 * a));
-		else
-			cout << "The equation has no real roots." << endl;
+	//	else
+		//	cout << "The equation has no real roots." << endl;
 	}
 
 };
 
 int main ()
 {
-	QuadraticEquation input; // declares two root objects
+	QuadraticEquation input; // declares object 'input'
 
 	// prompt user for a, b, and c values
 	cout << "This is a program that calculates the roots of the quadratic equation in the form ax^2 + bx + c = 0." << endl;
@@ -80,6 +80,20 @@ int main ()
 	cout << "Enter a value for 'c' :";
 	cin >> input.c;
 	
-	cout << "The first root is: " << input.getRoot1() << endl;
-	cout << "The second root is: " << input.getRoot2() << endl;
+	double discriminantcheck;
+	discriminantcheck = ((input.b * input.b) - (4 * input.a * input.c));
+	if (discriminantcheck > 0) {
+		cout << "The first root is: " << input.getRoot1() << endl;
+		cout << "The second root is: " << input.getRoot2() << endl;
+	}
+	else if (discriminantcheck = 0)
+	{
+		cout << "The first root is: " << input.getRoot1() << endl;
+	}
+	else
+	{
+		cout << "The equation has no real roots" << endl;
+	}
+
+	return 0;
 }
