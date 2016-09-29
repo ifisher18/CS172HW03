@@ -2,7 +2,7 @@
 // Ian Fisher
 // CS172_HW03_EX_04
 // 9/26/16
-///////////////////
+////////////////////
 
 #include <iostream>
 #include <string>
