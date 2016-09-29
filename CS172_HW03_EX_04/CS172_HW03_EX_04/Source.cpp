@@ -6,39 +6,36 @@
 
 #include <iostream>
 #include <string>
-
 using namespace std;
 
-// sort characters in a string
-
+// function that sorts the characters in a string
 string sort(string& s)
 {
-	bool organized = true;
-
-	
-	s.size();
+	bool organized = true; // flags organized to be true, defaults to true before the do loop
+	s.size(); // declares size of string s
 	do {
 		organized = true; // flag
-		for (int i = 0; i < s.size() - 1; i++)
+		for (int i = 0; i < s.size() - 1; i++) // loops through each memory location of array s
 		{
-			if (s[i] > s[i + 1])
+			if (tolower(s[i]) > tolower(s[i + 1])) // if statement that checks if character in first memory location is less than char in second location
 			{
-				char temp = s[i];
-				s[i] = s[i + 1];
-				s[i + 1] = temp;
-				organized = false;
+				char temp = s[i]; // temp value (used to switch)
+				s[i] = s[i + 1]; // switching process
+				s[i + 1] = temp; // switching process
+				organized = false; // sets organized to false after if statement
 			}
 		}
-	} while (!organized);
-	
-	return s;
+	} while (!organized); // the loop will keep running until organized
+	return s; // returns the sorted string
 }
 
+// function that prompts user for input, 
 int main ()
 {
-	string input;
+	string input; // creates variable input (string type)
 	cout << "Enter a string s: ";
 	cin >> input;
-	for (int i = 0;
-	cout << "The sorted string is: " << sort(input) << endl;
+
+	cout << "The sorted string is: " << sort(input) << endl; // calls sort function which sorts input, returns result
+	return 0;
 }
