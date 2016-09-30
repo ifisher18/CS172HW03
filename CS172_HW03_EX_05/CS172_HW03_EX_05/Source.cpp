@@ -164,13 +164,13 @@ int main() {
     // client program part for testing constant equals(int) and equals(const MyInteger&)
     cout << "Constant functions equals(int) and equals(const MyInteger&) output:" << endl;
     int g;
-    cout << "Enter a random integer: ";
+    cout << "Enter a random integer: "; // prompts user for a random integer
     cin >> g;
-    if (integer.equals(g)) {
+    if (integer.equals(g)) { // if statement that checks truth
         cout << "The inputed value is equal to previously inputed value" << endl;
     } else cout << "The inputed value is not equal to previously inputed value" << endl;
 
-    if (integer.equals(MyInteger(g))) {
+    if (integer.equals(MyInteger(g))) { // if statement that checks if true, truth of statement results in one of two statements
         cout << "The inputed value is equal to previously inputed value" << endl;
     } else cout << "The inputed value is not equal to previously inputed value" << endl;
     cout << endl;
@@ -180,8 +180,8 @@ int main() {
     string x;
     cout << "Enter a number: ";
     cin >> x;
-    int t = MyInteger::parseInt(x);
-    cout << "The number entered was: " << t << endl;
+    int t = MyInteger::parseInt(x); // declares a variable t and then converts
+    cout << "The number entered was: " << t << endl; // outputs to user what t is, or checks if function is working
     cout << endl;
 
     
